@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const accounts = [
+        { userName: 'user1', password: 'pass1' },
+        { userName: 'user2', password: 'pass2' },
+        { userName: 'user3', password: 'pass3' },
+        { userName: 'user4', password: 'pass 4' }
+        ];
+        const index = accounts.findIndex(account => account.password.includes(' '));
+        
+        if (index !== -1) {
+          console.log(`Tài khoản tại vị trí ${index} có mật khẩu chứa dấu cách.`);
+        } else {
+          console.log('Mọi tài khoản hợp lệ.');
+        }
+    </script>
+</body>
+</html>

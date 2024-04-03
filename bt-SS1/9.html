@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getAllHobbies(users) {
+            const hobbies = [];
+          
+            users.forEach(user => {
+              user.hobbies.forEach(hobby => {
+                if (!hobbies.includes(hobby)) {
+                  hobbies.push(hobby);
+                }
+              });
+            });
+          
+            return hobbies;
+          }
+          
+          const users = [
+            { id: 1, name: 'Alice', hobbies: ['Reading', 'Drawing'] },
+            { id: 2, name: 'Bob', hobbies: ['Gaming', 'Cooking', 'Reading'] },
+            // ...
+          ];
+          
+          const result = getAllHobbies(users);
+          console.log(result);
+    </script>
+</body>
+</html>

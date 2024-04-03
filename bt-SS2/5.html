@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Định nghĩa đối tượng employee
+const employee = {
+    name: "",
+    age: 0
+  };
+  
+  // Tạo một mảng employees chứa 3 đối tượng nhân viên với dữ liệu khác nhau
+  const employees = [
+    {
+      name: "Nguyễn Văn A",
+      age: 21,
+    },
+    {
+      name: "Nguyễn Văn B",
+      age: 30,
+    },
+    {
+      name: "Nguyễn Văn C",
+      age: 19,
+    }
+  ];
+  
+  function sortEmployees(arr, sortType) {
+    arr.sort(function(a, b) {
+      if (sortType === "Increase") {
+        return a.age - b.age;
+      } else if (sortType === "Decrease") {
+        return b.age - a.age;
+      }
+    });
+    for (let i = 0; i < arr.length; i++) {
+      console.log("Name: " + arr[i].name + ", Age: " + arr[i].age);
+    }
+  }
+  
+  sortEmployees(employees, "Decrease");
+  sortEmployees(employees, "Increase");
+    </script>
+</body>
+</html>

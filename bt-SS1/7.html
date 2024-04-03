@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findMaxValue(arr, num) {
+            const filteredArr = arr.filter(item => item <= num);
+            if (filteredArr.length === 0) {
+              return null;
+            }
+            const maxValue = filteredArr.reduce((max, current) => {
+              return Math.max(max, current);
+            });
+            return maxValue;
+          }
+          
+          const arr = [10, 5, 8, 12, 4, 15];
+          const num = 9;
+          const result = findMaxValue(arr, num);
+          console.log(result);
+    </script>
+</body>
+</html>

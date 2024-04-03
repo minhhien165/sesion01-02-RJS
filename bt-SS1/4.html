@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const books = [
+            { id: 1, name: 'Book 1' },
+            { id: 2, name: 'Book 2' },
+            { id: 3, name: 'Book 3' },
+            { id: 4, name: 'Book 4' }
+        ];
+        const searchId = 3;
+        const foundBook = books.find(book => book.id === searchId);
+        
+        if (foundBook) {
+          console.log(`ID: ${foundBook.id}, Name: ${foundBook.name}`);
+        } else {
+          console.log('Không có kết quả tìm kiếm');
+        }        
+    </script>
+</body>
+</html>

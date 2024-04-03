@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function totalPrice(carts) {
+            return carts.reduce((total, product) => {
+              const price = product.price;
+              const quantity = product.quantity;
+              const subtotal = price * quantity;
+              return total + subtotal;
+            }, 0);
+          }
+          
+          const carts = [
+            {
+              product_name: "Cam",
+              price: 20000,
+              quantity: 5,
+            },
+            {
+              product_name: "Táo",
+              price: 30000,
+              quantity: 3,
+            },
+            {
+              product_name: "Xoài",
+              price: 40000,
+              quantity: 2,
+            },
+          ];
+          
+          console.log(totalPrice(carts));
+    </script>
+</body>
+</html>
